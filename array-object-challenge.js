@@ -58,16 +58,16 @@ const quiz = [
 */
 
 // Write your answer here
-quiz.forEach((subjectData) => {
-    console.log(`Subject: ${subjectData.subject}`);
-    subjectData.quiz.forEach((questionData, index) => {
-        console.log(`Question ${index + 1}: ${questionData.question}`);
+quiz.forEach((subject) => {
+    console.log(`Subject: ${subject.subject}`);
+    subject.quiz.forEach((question, index) => {
+        console.log(`Question ${index + 1}: ${question.question}`);
         console.log("Options:");
-        questionData.options.forEach((option, optionIndex) => {
+        question.options.forEach((option, optionIndex) => {
             console.log(`${optionIndex + 1}. ${option}`);
         });
-        console.log(`Answer: ${questionData.answer}`);
-        if (index < subjectData.quiz.length - 1) {
+        console.log(`Answer: ${question.answer}`);
+        if (index < subject.quiz.length - 1) {
             console.log("-----------------------");
         }
     });
